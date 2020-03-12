@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   resources :three_digital_listings
   resources :two_digital_listings
 
+  get '*path', to: 'application#fallback_index_html', constraints: ->(request) do
+    !request.xhr? && request.format.html?
+  end
+
 end
