@@ -1,0 +1,50 @@
+@import 'variables';
+
+.header {
+    height: 80px;
+
+    .navbar {
+        background-color: $dark-purple;
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        width: 100vw;
+        z-index: 10;
+        box-shadow: 0 0 3vw black;
+        
+        h1, h4 {
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 40px;
+            text-align: left;
+            padding: 20px;
+            font-family: $font-poiret;
+            font-style: italic;
+            letter-spacing: 5px;
+            color: $link-color;
+
+            span {
+                font-family: $font-vibes;
+                font-style: normal;
+            }
+        }
+
+        .nav {
+            display: flex;
+            align-items: flex-end;
+            position: absolute;
+            right: 10px;
+            top: 35px;
+            a {
+                padding: 5px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: $link-color;
+        }
+    }
+}

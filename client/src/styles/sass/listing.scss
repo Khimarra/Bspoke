@@ -1,0 +1,39 @@
+@import 'variables';
+
+.listing {
+    color: $link-color-2;
+    font-family: $font-mont;
+    margin-top: 15vw;
+    h3 {
+        font-size: 20px;
+    }
+
+    .listing-img-container {
+        width: 100vw;
+        height: auto;
+        box-shadow: .5vw 1vw 2vw $medium-gray;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.product-details {
+    background-color: $light-purple-gray;
+    width: 200px;
+    margin: 50px auto;
+    padding: 5vw 0;
+    border-radius: 20px;
+    box-shadow: .5vw 1vw 2vw $medium-gray;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+            padding: 10px;
+            font-size: 15px;
+        }
+    }
+}

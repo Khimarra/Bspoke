@@ -1,0 +1,50 @@
+@import 'variables';
+
+.gallery {
+    font-family: $font-mont;
+    margin: 10vw auto;
+}
+
+.gallery-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start space-evenly;
+    height: 200px;
+    margin: 5vw;
+    overflow: scroll;
+
+    @media (min-width: $breakpoint-phablet) {
+        height: 400px;
+    }
+
+    :-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.gallery-card {
+    height: 150px;
+    width: 150px;
+    background-color: $light-purple-gray;
+    border-radius: 20px;
+    box-shadow: .5vw 1vw 2vw $medium-gray;
+    margin: 10px;
+
+    .gallery-card-image-container {
+        padding-top: 20px;
+        height: 70%;
+        width: 85%;
+        margin: auto;
+
+        img {
+            max-height: 100%;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    @media (min-width: $breakpoint-phablet) {
+        height: 350px;
+        width: 300px;
+    }
+}

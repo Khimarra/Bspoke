@@ -1,0 +1,133 @@
+body, footer {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100; }
+
+.container {
+  height: contain;
+  min-height: 100vh;
+  background-image: url(../../images/colorfulAbstractPainting.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #28193a;
+  box-shadow: 0 0 3vw black; }
+
+.form {
+  position: relative;
+  top: 150px;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 250px;
+  background-color: #ccc6d3;
+  border-radius: 20px;
+  box-shadow: .5vw 1vw 2vw black; }
+
+.create-listing-link {
+  display: none; }
+  @media (min-width: 600px) {
+    .create-listing-link {
+      display: contents; } }
+
+.create-listing {
+  margin-top: -100px;
+  width: 400px; }
+
+.text-field {
+  height: 15px;
+  border-radius: 5px;
+  padding: 5px; }
+
+.text-area {
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+  box-shadow: inset 2px 2px 0px #9a9a9a, inset -2px -2px 0px #eeeeee; }
+
+button {
+  display: block;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  color: lightgray;
+  background-color: #6c528f;
+  box-shadow: 2px 2px 3px #888888, -1px -1px 2px #e4e4e4;
+  margin: 10px auto; }
+
+.attach-button {
+  height: 30px;
+  font-size: 15px;
+  margin: auto; }
+
+.radio-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  .radio-options input {
+    margin: 16px;
+    height: 20px;
+    width: 20px; }
+
+.listing-text {
+  display: none; }
+  @media (min-width: 600px) {
+    .listing-text {
+      display: block;
+      margin-bottom: 10px; } }
+
+h1 {
+  color: #6c528f; }
+
+h2 {
+  font-size: 25px; }
+
+h3 {
+  color: #6c528f;
+  font-size: 20px;
+  padding-top: 10px;
+  margin: 0; }
+
+h4 {
+  margin: 0; }
+
+a, h5 {
+  color: #6c528f;
+  font-size: 15px;
+  text-decoration: none;
+  margin: 0; }
+
+.header {
+  height: 80px; }
+  .header .navbar {
+    background-color: #28193a;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+    box-shadow: 0 0 3vw black; }
+    .header .navbar h1, .header .navbar h4 {
+      margin: 0; }
+    .header .navbar h1 {
+      font-size: 40px;
+      text-align: left;
+      padding: 20px;
+      font-family: "Poiret One", cursive;
+      font-style: italic;
+      letter-spacing: 5px;
+      color: lightgray; }
+      .header .navbar h1 span {
+        font-family: "Great Vibes", cursive;
+        font-style: normal; }
+    .header .navbar .nav {
+      display: flex;
+      align-items: flex-end;
+      position: absolute;
+      right: 10px;
+      top: 35px; }
+      .header .navbar .nav a {
+        padding: 5px; }
+    .header .navbar a {
+      text-decoration: none;
+      color: lightgray; }
+
+/*# sourceMappingURL=header.css.map */

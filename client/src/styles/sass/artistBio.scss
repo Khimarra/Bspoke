@@ -1,0 +1,11 @@
+@import 'variables';
+
+.artist-bio {
+    height: 200px;
+    width: 300px;
+    margin: 5vw auto;
+    background-color: $light-purple-gray;
+    border-radius: 20px;
+    box-shadow: .5vw 1vw 2vw $medium-gray;
+    overflow: scroll;
+}

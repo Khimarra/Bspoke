@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  price: 1.5
+  description: MyString
+  polygons: 1
+  is_uvd: false
+  is_textured: false
+  is_rigged: false
+  is_animated: false
+  user: one
+
+two:
+  title: MyString
+  price: 1.5
+  description: MyString
+  polygons: 1
+  is_uvd: false
+  is_textured: false
+  is_rigged: false
+  is_animated: false
+  user: two

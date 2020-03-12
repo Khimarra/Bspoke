@@ -1,0 +1,144 @@
+// ------ FONTS ------
+$font-shadows: 'Shadows Into Light', cursive;
+$font-dancing: 'Dancing Script', cursive;
+$font-bellota: 'Bellota', cursive;
+$font-mont: 'Montserrat', sans-serif;
+$font-vibes: 'Great Vibes', cursive;
+$font-poiret: 'Poiret One', cursive;
+$font-khand: 'Khand', sans-serif;
+
+// ------ COLORS ------
+$dark-purple: rgb(40, 25, 58);
+$dark-purple-trans: rgba(40, 25, 58, .75);
+$medium-gray: rgb(136, 136, 136);
+$link-color: rgb(211, 211, 211);
+$link-color-2: rgb(108, 82, 143);
+$light-purple-gray: rgb(204, 198, 211);
+
+// ------ MEDIA QUERIES ------
+$breakpoint-phablet: 600px;
+$breakpoint-tablet: 900px;
+$breakpoint-desktop: 1200px;
+
+
+// ------ REUSED BLOCKS ------
+body, footer {
+    font-family: $font-mont;
+    font-weight: 100;
+}
+.container {
+    height: contain;
+    min-height: 100vh;
+    background-image: url(../../images/colorfulAbstractPainting.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $dark-purple;
+    box-shadow: 0 0 3vw black;
+}
+
+.form {
+    position: relative;
+    top: 150px;
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 250px;
+    background-color: $light-purple-gray;
+    border-radius: 20px;
+    box-shadow: .5vw 1vw 2vw black;
+}
+
+.create-listing-link {
+    display: none;
+
+    @media (min-width: 600px) {
+        display: contents;
+    }
+}
+
+.create-listing {
+    margin-top: -100px;
+    width: 400px;
+}
+
+.text-field {
+    height: 15px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.text-area {
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    box-shadow: inset 2px 2px 0px rgb(154, 154, 154), 
+        inset -2px -2px 0px rgb(238, 238, 238);
+}
+
+button {
+    display: block;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+    color: $link-color;
+    background-color: $link-color-2;
+    box-shadow:  2px 2px 3px $medium-gray, 
+         -1px -1px 2px rgb(228, 228, 228);
+    margin: 10px auto;
+}
+
+.attach-button {
+    height: 30px;
+    font-size: 15px;
+    margin: auto;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    input {
+        margin: 16px;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.listing-text {
+    display: none;
+
+    @media (min-width: $breakpoint-phablet) {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+h1 {
+    color: $link-color-2;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    color: $link-color-2;
+    font-size: 20px;
+    padding-top: 10px;
+    margin: 0;
+}
+
+h4 {
+    margin: 0;
+}
+
+a, h5 {
+    color: $link-color-2;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 0;
+}
+
+
+

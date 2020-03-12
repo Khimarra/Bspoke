@@ -1,0 +1,31 @@
+@import 'variables';
+// image source: https://www.pexels.com/photo/colorful-abstract-painting-3679453/
+
+.home {
+     .home-scroll {
+        position: absolute;
+        top: 300px;
+        width: 100%;
+        background-color: $dark-purple;
+        box-shadow: -20px -20px 10px $dark-purple,
+            20px 20px 10px $dark-purple,
+            -20px 20px 10px $dark-purple,
+            20px -20px 10px $dark-purple;
+        opacity: 75%;
+
+        h1 {
+            margin: 0;
+            text-align: center;    
+            z-index: 2;
+            color: $medium-gray;
+            mix-blend-mode: screen;
+            font-weight: 300;
+        }
+
+        h2 {
+            color: $medium-gray;
+            mix-blend-mode: screen;
+            font-weight: 250;
+        }
+    }
+}

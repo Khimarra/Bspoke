@@ -1,0 +1,16 @@
+@import 'variables';
+
+.footer {
+    background-color: $dark-purple;
+    color: $medium-gray;
+    box-shadow: 0 0 3vw black;
+    padding: 20px;
+
+    .icons {
+        font-size: 40px;
+        letter-spacing: 10px;
+        padding-left: 10px;
+    }
+}
+
+
