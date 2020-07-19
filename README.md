@@ -258,3 +258,4 @@ _The **Bspoke** MVP will allow a user to create an account, browse existing prod
 - _Had some trouble with my front end routing because I have shared components nested within other components that contain information passed from props, but are also links to specific places. I ended up having to move state into a few additional components and conditionally rendering what info shows up depending on how the user gets to that link._
 
 ***
+<!-- test -->
