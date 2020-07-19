@@ -364,5 +364,3 @@ This is the part of my app that handles the creation of new listings. It took a 
 - _Had some trouble with my front end routing because I have shared components nested within other components that contain information passed from props, but are also links to specific places. I ended up having to move state into a few additional components and conditionally rendering what info shows up depending on how the user gets to that link._
 
 ***
-
-this is another unnecessary edit
