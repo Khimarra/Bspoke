@@ -249,7 +249,113 @@ _The **Bspoke** MVP will allow a user to create an account, browse existing prod
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+This is the part of my app that handles the creation of new listings. It took a lot of trial and error to figure out how to declare the initial state of "pictures" due to using S3 file storage, and the same submit button working for all of the form data at once. 
+
+```  
+  constructor(props) {
+    super(props)
+    this.state = {
+      currentUser: null,
+      authFormData: {
+        first_name: '',
+        last_name: '',
+        username: '',
+        artist_bio: '',
+        email: '',
+        password: ''
+      },
+      new3dListingData: {
+        title: '',
+        description: '',
+        price: null,
+        polygons: null,
+        is_uvd: false,
+        is_textured: false,
+        is_rigged: false,
+        is_animated: false,
+        listingType: 'three',
+        user_id: null
+      },
+      new2dListingData: {
+        title: '',
+        description: '',
+        price: null,
+        height: null,
+        width: null,
+        dpi: null,
+        listingType: 'two',
+        user_id: null
+      },
+      pictures: []
+    }
+  }
+
+  async componentDidMount() {
+    const currentUser = await verifyUser()
+    if (currentUser) {
+      this.setState({ currentUser })
+    }
+  }
+
+  createHandleChange = (e, listingType) => {
+    let { name, value } = e.target
+    let objectName
+
+    if (value === 'true') {
+      value = true
+    } else if (value === 'false') {
+      value = false
+    }
+
+    if (listingType == 'three') {
+      objectName = 'new3dListingData'
+    } else if (listingType == 'two') {
+      objectName = 'new2dListingData'
+    }
+
+    this.setState(prevState => ({
+      [objectName]: {
+        ...prevState[objectName],
+        [name]: value
+      }
+    }))
+  }
+
+  createHandle3dSubmit = (e) => {
+    e.preventDefault()
+    const listingData = this.state.new3dListingData
+    listingData.user_id = this.state.currentUser.id
+    let tData = new FormData();
+    tData.append('pictures', this.state.pictures)
+    tData.append('title', this.state.new3dListingData.title)
+    tData.append('description', this.state.new3dListingData.description)
+    tData.append('price', this.state.new3dListingData.price)
+    tData.append('polygons', this.state.new3dListingData.polygons)
+    tData.append('is_uvd', this.state.new3dListingData.is_uvd)
+    tData.append('is_textured', this.state.new3dListingData.is_textured)
+    tData.append('is_rigged', this.state.new3dListingData.is_rigged)
+    tData.append('is_animated', this.state.new3dListingData.is_animated)
+    tData.append('listingType', this.state.new3dListingData.listingType)
+    tData.append('user_id', this.state.new3dListingData.user_id)
+    create3dListing(tData)
+  }
+
+  handlePicturesChange = (e) => {
+    let pictures = e.target.files[0]
+    if (pictures) {
+      this.setState({pictures: pictures})
+    }
+
+  }
+
+  createHandle2dSubmit = (e) => {
+    e.preventDefault()
+    const listingData = this.state.new2dListingData
+    listingData.user_id = this.state.currentUser.id
+    console.log(listingData)
+    create2dListing(listingData)
+  }
+```
 
 ## Code Issues & Resolutions
 
@@ -258,4 +364,3 @@ _The **Bspoke** MVP will allow a user to create an account, browse existing prod
 - _Had some trouble with my front end routing because I have shared components nested within other components that contain information passed from props, but are also links to specific places. I ended up having to move state into a few additional components and conditionally rendering what info shows up depending on how the user gets to that link._
 
 ***
-<!-- test -->
